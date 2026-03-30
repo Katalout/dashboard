@@ -111,5 +111,26 @@ button {
 
 .maincontent {
     background-color: gainsboro;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 20px;
+}
 
+.leftside {
+    display: grid;
+    grid-template: auto 1fr 1fr 1fr/ 1fr 1fr;
+    gap: 15px;
+}
+
+.leftside h2 {
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+.card {
+    background: linear-gradient(to right,
+            rgb(236, 184, 87) 10px,
+            whitesmoke 10px);
+    border-radius: 10px;
+    padding: 25px 20px;
 }
