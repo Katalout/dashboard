@@ -121,6 +121,7 @@ button {
     display: grid;
     grid-template: auto 1fr 1fr 1fr/ 1fr 1fr;
     gap: 15px;
+    padding-right: 20px;
 }
 
 .leftside h2 {
@@ -134,4 +135,14 @@ button {
             whitesmoke 10px);
     border-radius: 10px;
     padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.leftside .icons {
+    display: flex;
+    gap: 10px;
+    align-self: flex-end;
 }
