@@ -120,7 +120,7 @@ button {
 .leftside {
     display: grid;
     grid-template: auto 1fr 1fr 1fr/ 1fr 1fr;
-    gap: 15px;
+    gap: 20px;
     padding-right: 20px;
 }
 
@@ -131,9 +131,11 @@ button {
 
 .card {
     background: linear-gradient(to right,
-            rgb(236, 184, 87) 10px,
-            whitesmoke 10px);
-    border-radius: 10px;
+            rgb(236, 184, 87) 8px,
+            whitesmoke 8px);
+    border-radius: 8px;
+    -webkit-box-shadow: 5px 6px 6px 0px rgba(0, 0, 0, 0.157);
+    box-shadow: 5px 6px 6px 0px rgba(0, 0, 0, 0.157);
     padding: 25px 20px;
     display: flex;
     flex-direction: column;
@@ -141,8 +143,36 @@ button {
 
 }
 
+.leftside h3 {
+    margin-bottom: 8px;
+}
+
 .leftside .icons {
     display: flex;
     gap: 10px;
     align-self: flex-end;
+}
+
+.rightside {
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+    gap: 20px;
+}
+
+.rightside>div {
+    background-color: whitesmoke;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    gap: 10px;
+}
+
+.upper-block h3 {
+    line-height: 1.5;
+}
+
+.upper-block div:not(:first-child) {
+    border-top: solid 2px gainsboro;
+    padding-top: 0.25em;
 }
