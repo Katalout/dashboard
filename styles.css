@@ -25,6 +25,10 @@ p {
     line-height: 1.1em;
 }
 
+ul {
+    list-style: none;
+}
+
 p {
     color: #3d3d3d;
 }
@@ -48,6 +52,14 @@ p {
 .sidebar li {
     margin-bottom: 1em;
     font-weight: bold;
+}
+
+svg {
+    position: relative;
+    height: 1.2em;
+    top: 0.2em;
+    fill: whitesmoke;
+    margin-right: 1em;
 }
 
 .sidebar h1 {}
