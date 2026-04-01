@@ -1,10 +1,15 @@
 html,
 body,
 .container {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
+}
+
+body {
+    background-color: gainsboro;
+    margin: 0;
 }
 
 :root {
@@ -28,6 +33,7 @@ p {
 
 ul {
     list-style: none;
+    display: contents;
 }
 
 p {
@@ -38,37 +44,55 @@ p {
     display: grid;
     grid-template-columns: 300px 1fr;
     grid-template-rows: auto 1fr;
-    background-color: gainsboro;
 }
 
 .sidebar {
     grid-area: 1/1/3/2;
     background-color: var(--myblue, skyblue);
     color: whitesmoke;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(10, auto) 1fr;
+    column-gap: 1em;
+    row-gap: 1em;
+    align-items: center;
     padding: 1em;
-    gap: 2em;
+    /* display: flex;
+    flex-direction: column;
+    
+    gap: 2em; */
+}
+
+#dashboard {
+    display: contents;
+
+}
+
+ul :first-child,
+ul :nth-child(2) {
+    margin-top: 2em;
 }
 
 .sidebar li {
-    margin-bottom: 1em;
+    /* margin-bottom: 1em; */
     font-weight: bold;
 }
 
 .sidebar svg {
     position: relative;
     height: 1.2em;
-    top: 0.2em;
+    /* top: 0.2em; */
     fill: whitesmoke;
-    margin-right: 1em;
+    /* margin-right: 1em; */
+    margin-inline: auto;
 }
 
 .sidebar img {
+    margin-inline: auto;
     height: 1.2em;
     position: relative;
-    top: 0.175em;
-    margin-right: 1em;
+    /* top: 0.175em; */
+    /* margin-right: 1em; */
 
 }
 
@@ -143,7 +167,7 @@ button {
 }
 
 .maincontent {
-
+    grid-area: 2/2/3/3;
     display: grid;
     grid-template-columns: 2fr 1fr;
     padding: 20px;
