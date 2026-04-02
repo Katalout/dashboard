@@ -1,11 +1,22 @@
+@font-face {
+    font-family: hammersmith;
+    src: url(fonts/Hammersmith_One/HammersmithOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: maven;
+    src: url(fonts/Maven_Pro/MavenPro-VariableFont_wght.ttf);
+}
+
 html,
 body,
 .container {
     width: 100vw;
     height: 100vh;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: maven, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 }
+
 
 body {
     background-color: gainsboro;
@@ -18,6 +29,14 @@ body {
 
 * {
     box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: hammersmith, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 200;
 }
 
 h1,
@@ -37,7 +56,7 @@ ul {
 }
 
 p {
-    color: #3d3d3d;
+    font-weight: 400;
 }
 
 .container {
@@ -147,17 +166,21 @@ input {
 }
 
 .bottom-row {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 20px;
 }
 
 .bottom-row .left {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto auto;
+    display: contents;
+    /*  grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto; */
     /* align-items: center; */
-    column-gap: 1em;
+    /* column-gap: 1em; */
 }
 
 .bottom-row .left .icon {
@@ -167,6 +190,7 @@ input {
 }
 
 .bottom-row .left h1 {
+    grid-area: 2/2/3/3;
     align-self: baseline;
 }
 
@@ -177,6 +201,9 @@ input {
 .bottom-row .right {
     display: flex;
     gap: 30px;
+    grid-area: 2/3/3/4;
+    align-self: start;
+    justify-self: end;
 }
 
 button {
