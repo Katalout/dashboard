@@ -231,8 +231,12 @@ button {
 
 .leftside .icons {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     align-self: flex-end;
+}
+
+.leftside img {
+    width: 1.5em;
 }
 
 .rightside {
